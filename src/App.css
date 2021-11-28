@@ -7,3 +7,11 @@ body {
 	height: 100%;
 	width: 100%;
 }
+
+.navbar {
+	padding: 10px;
+	border-color: transparent;
+	box-shadow: 0 0px 5px 3px rgba(0, 0, 0, 0.08);
+	backdrop-filter: blur(22px);
+	z-index: 2;
+}
