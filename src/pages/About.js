@@ -1,9 +1,12 @@
 import React from 'react';
-import { Stack, HStack } from '@chakra-ui/react';
-import BackgroundVideo from '../pictures/vvideo.mp4';
+import { Stack, HStack, Image, useMediaQuery } from '@chakra-ui/react';
+import AboutVideo from '../pictures/AboutVideo.mp4';
 import Banner from '../layout/Banner';
+import AboutImage from '../pictures/AboutImage.jpeg';
 
 const About = () => {
+	const [isSmallerThan760] = useMediaQuery('(max-width: 760px)');
+
 	const AboutUsHeading = () => {
 		return <>Who are we?</>;
 	};
@@ -12,18 +15,26 @@ const About = () => {
 		return (
 			<>
 				Hawke Prohibition is your one-stop shop solution, offering everything
-				that you need for distillation and brewing in Canada. We are the
-				BackgroundVideoen Spirit award winner of 2021 and offer locally made
-				premium quality Vodka.
+				that you need for distillation and brewing in Canada. We are the Spirit
+				award winner of 2021 and offer locally made premium quality Vodka.
 			</>
 		);
 	};
 	const showBackgroundImage = () => {
 		return (
 			<HStack h='100%' w='100%' position='absolute'>
-				<video autoPlay loop muted className='videoStyle'>
-					<source src={BackgroundVideo} type='video/mp4' />
-				</video>
+				{isSmallerThan760 ? (
+					<Image
+						height='100%'
+						width='100%'
+						objectFit='cover'
+						src={AboutImage}
+					/>
+				) : (
+					<video className='videoStyle' autoPlay muted loop>
+						<source src={AboutVideo} type='video/mp4'></source>
+					</video>
+				)}
 			</HStack>
 		);
 	};
