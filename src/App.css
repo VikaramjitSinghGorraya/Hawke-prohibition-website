@@ -12,6 +12,24 @@ body {
 	padding: 10px;
 	border-color: transparent;
 	box-shadow: 0 0px 5px 3px rgba(0, 0, 0, 0.08);
-	backdrop-filter: blur(22px);
+	backdrop-filter: blur(90px);
 	z-index: 2;
+}
+
+.productContainerScrollBar::-webkit-scrollbar {
+	height: 5px;
+	width: 12px;
+}
+
+.productContainerScrollBar::-webkit-scrollbar-track {
+	background-color: transparent;
+}
+
+.productContainerScrollBar::-webkit-scrollbar-thumb {
+	background-color: gray;
+	max-width: 10px !important;
+}
+
+.blackHeading {
+	color: black !important;
 }
