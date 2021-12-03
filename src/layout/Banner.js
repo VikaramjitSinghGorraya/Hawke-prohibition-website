@@ -51,7 +51,7 @@ const Banner = ({
 				justifyContent='center'
 			>
 				<Heading as='h2'>{aboutUsBanner ? '' : homeIntroHeading}</Heading>
-				<Text color={aboutUsBanner ? 'brand.white' : 'brand.golden'}>
+				<Text as='p' color={aboutUsBanner ? 'brand.white' : 'brand.golden'}>
 					{aboutUsBanner ? aboutUsText : homeIntroText}
 				</Text>
 				{aboutUsBanner ? '' : <Button>BUY NOW</Button>}
