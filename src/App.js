@@ -3,9 +3,13 @@ import './App.css';
 import Home from './pages/Home';
 import About from './pages/About';
 import Navbar from './layout/Navbar';
+import Footer from './layout/Footer';
+import Spirits from './pages/Spirits';
+import Header from './layout/Header';
+
 function App() {
 	return (
-		<VStack minH='100vh' spacing={0}>
+		<VStack minH='100vh' spacing={5}>
 			<Navbar />
 			<VStack
 				w={['90%', '95%']}
@@ -16,7 +20,10 @@ function App() {
 			>
 				<Home />
 				<About />
+				<Header text='SPIRITS' />
+				<Spirits />
 			</VStack>
+			<Footer />
 		</VStack>
 	);
 }
