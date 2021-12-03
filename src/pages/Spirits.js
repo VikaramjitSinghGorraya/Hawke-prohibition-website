@@ -8,7 +8,12 @@ import Product3 from '../pictures/Product3.jpg';
 const Spirits = () => {
 	return (
 		<VStack w='100%'>
-			<HStack className='productContainerScrollBar' spacing={10}>
+			<HStack
+				className='productContainerScrollBar'
+				spacing={10}
+				w='100%'
+				overflowX='auto'
+			>
 				<ProductCard
 					imageName={Product1}
 					productName='Baby-X-Vodka'
