@@ -10,8 +10,8 @@ export const globalTheme = {
 			color: 'brand.golden',
 		},
 		p: {
-			fontSize: '1.8em',
-			fontWeight: '100',
+			fontSize: ['1.3rem', '1.8em'],
+			fontWeight: ['300', '100'],
 			fontStyle: 'italic',
 		},
 	},
