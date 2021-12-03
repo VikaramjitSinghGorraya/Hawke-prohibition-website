@@ -3,6 +3,7 @@ const buttonTheme = {
 		_hover: {
 			bg: 'brand.white',
 			color: 'brand.golden',
+			border: '1px solid #bfa25a',
 		},
 		_focus: {
 			boxShadow: 'none',
@@ -11,6 +12,7 @@ const buttonTheme = {
 		color: 'brand.white',
 		bg: 'brand.golden',
 		borderRadius: '5px',
+		border: '1px',
 		fontWeight: ['300', '100', '100', '100'],
 		padding: '5',
 	},
