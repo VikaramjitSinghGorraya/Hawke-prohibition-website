@@ -2,7 +2,7 @@ import React from 'react';
 import { Stack, HStack, Image, useMediaQuery } from '@chakra-ui/react';
 import AboutVideo from '../pictures/AboutVideo.mp4';
 import Banner from '../layout/Banner';
-import AboutImage from '../pictures/AboutImage.jpeg';
+import AboutImage from '../pictures/AboutImage1.jpg';
 
 const About = () => {
 	const [isSmallerThan760] = useMediaQuery('(max-width: 760px)');
