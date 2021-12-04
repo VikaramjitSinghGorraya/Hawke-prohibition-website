@@ -4,7 +4,7 @@ import AboutVideo from '../pictures/AboutVideo.mp4';
 import Banner from '../layout/Banner';
 import AboutImage from '../pictures/AboutImage1.jpg';
 
-const About = () => {
+const AboutSection = () => {
 	const [isSmallerThan760] = useMediaQuery('(max-width: 760px)');
 
 	const AboutUsHeading = () => {
@@ -15,8 +15,9 @@ const About = () => {
 		return (
 			<>
 				Hawke Prohibition is your one-stop shop solution, offering everything
-				that you need for distillation and brewing in Canada. We are the Spirit
-				award winner of 2021 and offer locally made premium quality Vodka.
+				that you need for distillation and brewing in Canada. We are the Alberta
+				Spirit Award winner of 2021 and offer locally made premium quality
+				Vodka.
 			</>
 		);
 	};
@@ -56,4 +57,4 @@ const About = () => {
 	);
 };
 
-export default About;
+export default AboutSection;
