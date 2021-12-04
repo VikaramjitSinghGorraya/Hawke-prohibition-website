@@ -13,7 +13,7 @@ const Logo = () => {
 				cursor='pointer'
 				onClick={() => (window.location = '/')}
 			/>
-			<Heading as='h1'>Purely Organic</Heading>
+			<Heading as='h1'>Purely Organic &nbsp;&nbsp;</Heading>
 		</HStack>
 	);
 };
