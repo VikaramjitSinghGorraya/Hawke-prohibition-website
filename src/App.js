@@ -1,27 +1,20 @@
 import { VStack } from '@chakra-ui/react';
 import './App.css';
-import Home from './pages/Home';
-import About from './pages/About';
+import { Routes, Route } from 'react-router-dom';
+import LearnMore from './pages/LearnMore';
 import Navbar from './layout/Navbar';
 import Footer from './layout/Footer';
-import Spirits from './pages/Spirits';
-import Header from './layout/Header';
+import Home from './pages/Home';
 
 function App() {
 	return (
 		<VStack minH='100vh' spacing={5}>
 			<Navbar />
-			<VStack
-				w={['90%', '95%']}
-				minH='100%'
-				spacing={10}
-				m='auto'
-				py={['5', '10']}
-			>
-				<Home />
-				<About />
-				<Header text='SPIRITS' />
-				<Spirits />
+			<VStack w={['90%', '95%']} minH='100%' m='auto' py={['5', '10']}>
+				<Routes>
+					<Route path='/LearnMore' element={<LearnMore />} />
+					<Route path='/' element={<Home />} />
+				</Routes>
 			</VStack>
 			<Footer />
 		</VStack>
