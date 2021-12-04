@@ -3,6 +3,7 @@ import { theme as chakraTheme } from '@chakra-ui/react';
 import globalTheme from './globalStyles';
 import colorTheme from './color';
 import buttonTheme from './components/Button';
+import linkTheme from './components/Link';
 import borderTheme from './components/Border';
 import layerTheme from './layerStyles';
 
@@ -27,6 +28,9 @@ const overrides = {
 		},
 		Border: {
 			...borderTheme,
+		},
+		Link: {
+			...linkTheme,
 		},
 	},
 };
