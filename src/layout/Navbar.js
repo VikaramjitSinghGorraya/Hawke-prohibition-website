@@ -2,7 +2,6 @@ import React from 'react';
 import {
 	HStack,
 	VStack,
-	Link,
 	Image,
 	Drawer,
 	DrawerFooter,
@@ -13,21 +12,53 @@ import {
 	useDisclosure,
 	useMediaQuery,
 } from '@chakra-ui/react';
+import { scroller, Link } from 'react-scroll';
+import { useLocation, useNavigate } from 'react-router-dom';
 import { HamburgerIcon } from '@chakra-ui/icons';
 import LogoImage from '../pictures/Logo.jpg';
 import Logo from './Logo';
 const Navbar = () => {
+	const location = useLocation();
+	const navigate = useNavigate();
 	const { isOpen, onOpen, onClose } = useDisclosure();
 	const btnRef = React.useRef();
 	const [isLessThan768] = useMediaQuery('(max-width: 768px)');
 
+	const scrollTarget = (target, off) =>
+		scroller.scrollTo(target, {
+			smooth: true,
+			duration: 800,
+			offset: off,
+		});
+
+	const scrollToPage = async (target, offset) => {
+		if (location.pathname !== '/') {
+			await navigate('/');
+		}
+		scrollTarget(target, offset);
+	};
+
 	const listItems = () => {
 		return (
 			<>
-				<Link>HOME</Link>
-				<Link>SPIRITS</Link>
-				<Link>ACCESSORIES</Link>
-				<Link>ABOUT US</Link>
+				<Link
+					className='smoothLink '
+					onClick={() => scrollToPage('home', -300)}
+				>
+					HOME
+				</Link>
+				<Link
+					className='smoothLink '
+					onClick={() => scrollToPage('about', -125)}
+				>
+					ABOUT
+				</Link>
+				<Link
+					className='smoothLink '
+					onClick={() => scrollToPage('spirits', -200)}
+				>
+					SPIRITS
+				</Link>
 			</>
 		);
 	};
