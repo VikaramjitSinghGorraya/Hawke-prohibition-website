@@ -1,29 +1,22 @@
 import React from 'react';
-import { VStack } from '@chakra-ui/react';
-import Banner from '../layout/Banner';
-
+import { VStack, HStack } from '@chakra-ui/react';
+import HomeSection from './HomeSection';
+import AboutSection from './AboutSection';
+import SpiritsSection from './SpiritsSection';
+import Header from '../layout/Header';
 const Home = () => {
-	const homeIntroHeading = () => {
-		return (
-			<>
-				It's <span>here!</span>
-			</>
-		);
-	};
-	const homeIntroText = () => {
-		return (
-			<>
-				Sherwood Park's very own premium Vodka. <br />
-				Made local, tastes international.
-			</>
-		);
-	};
 	return (
-		<VStack w='100%' spacing={6} bg='brand.bannerBg'>
-			<Banner
-				homeIntroText={homeIntroText()}
-				homeIntroHeading={homeIntroHeading()}
-			/>
+		<VStack w='100%' spacing={10}>
+			<HStack w='100%' id='home'>
+				<HomeSection />
+			</HStack>
+			<HStack w='100%' id='about'>
+				<AboutSection />
+			</HStack>
+			<Header text='SPIRITS' />
+			<HStack w='100%' id='spirits'>
+				<SpiritsSection />
+			</HStack>
 		</VStack>
 	);
 };
