@@ -6,9 +6,10 @@ import {
 	HStack,
 	Flex,
 	VStack,
-	Image,
 	Button,
 } from '@chakra-ui/react';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
 import BannerImage from '../pictures/BannerImage.png';
 const Banner = ({
 	aboutUsBanner = false,
@@ -36,7 +37,15 @@ const Banner = ({
 				{aboutUsBanner ? (
 					<Heading as='h2'>{aboutUsHeading}</Heading>
 				) : (
-					<Image src={BannerImage} objectFit='contain' h='100%' />
+					<LazyLoadImage
+						style={{
+							objectFit: 'contain',
+							height: '20rem',
+							width: '100%',
+						}}
+						effect='blur'
+						src={BannerImage}
+					/>
 				)}
 			</HStack>
 			{aboutUsBanner ? (
@@ -54,7 +63,13 @@ const Banner = ({
 				<Text as='p' color={aboutUsBanner ? 'brand.white' : 'brand.golden'}>
 					{aboutUsBanner ? aboutUsText : homeIntroText}
 				</Text>
-				{aboutUsBanner ? '' : <Button>BUY NOW</Button>}
+				{aboutUsBanner ? (
+					<Button onClick={() => (window.location = `/LearnMore`)}>
+						<a href='/LearnMore'>LEARN MORE</a>
+					</Button>
+				) : (
+					<Button>BUY NOW</Button>
+				)}
 			</VStack>
 		</Flex>
 	);
