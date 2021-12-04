@@ -36,8 +36,20 @@ const Footer = () => {
 			<VStack w='100%' layerStyle='footHeading'>
 				<Text as='p'>SOCIAL MEDIA</Text>
 				<HStack w='100%' justifyContent='center ' layerStyle='footNotes'>
-					<Image src={Instagram} h='1.6rem' w='1.6rem' />
-					<Image src={Facebook} h='1.6rem' w='1.6rem' />
+					<a
+						rel='noreferrer'
+						target='_blank'
+						href='https://www.instagram.com/hawkeprohibitiondistilleries/'
+					>
+						<Image src={Instagram} h='1.6rem' w='1.6rem' />
+					</a>
+					<a
+						rel='noreferrer'
+						target='_blank'
+						href='https://www.facebook.com/HawkeProhibition'
+					>
+						<Image src={Facebook} h='1.6rem' w='1.6rem' />
+					</a>
 				</HStack>
 			</VStack>
 		</Flex>
