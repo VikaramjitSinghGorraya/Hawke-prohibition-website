@@ -1,6 +1,6 @@
 import React from 'react';
 import { HStack, Heading, Image } from '@chakra-ui/react';
-import LogoImage from '../pictures/Logo.jpg';
+import LogoImage from '../pictures/Logo.png';
 const Logo = () => {
 	return (
 		<HStack w='100%' justifyContent='center' spacing={6}>
@@ -13,7 +13,7 @@ const Logo = () => {
 				cursor='pointer'
 				onClick={() => (window.location = '/')}
 			/>
-			<Heading as='h1'>Purely Organic &nbsp;&nbsp;</Heading>
+			<Heading as='h1'>Purely Organic &nbsp;&nbsp;&nbsp;</Heading>
 		</HStack>
 	);
 };
