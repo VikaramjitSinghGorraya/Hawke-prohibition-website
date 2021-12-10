@@ -7,7 +7,6 @@ export const globalTheme = {
 		h2: {
 			fontSize: '4.1em !important',
 			fontWeight: '100 !important',
-			color: 'brand.golden',
 		},
 		p: {
 			fontSize: ['1.3rem', '1.8em'],

@@ -10,7 +10,7 @@ export const layerTheme = {
 		textAlign: 'center',
 		fontWeight: '100',
 		fontStyle: 'italic',
-		color: 'brand.golden',
+		color: 'brand.black',
 	},
 };
 

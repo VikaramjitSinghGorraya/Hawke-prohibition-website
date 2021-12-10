@@ -1,18 +1,18 @@
 const buttonTheme = {
 	baseStyle: {
 		_hover: {
-			bg: 'brand.white',
-			color: 'brand.golden',
-			border: '1px solid #bfa25a',
+			bg: 'brand.black',
+			color: 'brand.white',
+			border: '0.5px solid black',
 		},
 		_focus: {
 			boxShadow: 'none',
 			outline: 'none',
 		},
-		color: 'brand.white',
-		bg: 'brand.golden',
+		color: 'brand.black',
+		bg: 'brand.white',
 		borderRadius: '5px',
-		border: '1px',
+		border: '0.5px solid transparent',
 		fontWeight: ['300', '100', '100', '100'],
 		padding: '5',
 	},
