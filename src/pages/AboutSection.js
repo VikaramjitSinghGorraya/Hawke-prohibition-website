@@ -1,8 +1,7 @@
 import React from 'react';
-import { Stack, HStack, Image, useMediaQuery } from '@chakra-ui/react';
+import { Stack, HStack, useMediaQuery } from '@chakra-ui/react';
 import AboutVideo from '../pictures/AboutVideo.mp4';
 import Banner from '../layout/Banner';
-import AboutImage from '../pictures/AboutImage1.jpg';
 
 const AboutSection = () => {
 	const [isSmallerThan760] = useMediaQuery('(max-width: 760px)');
@@ -23,19 +22,12 @@ const AboutSection = () => {
 	};
 	const showBackgroundImage = () => {
 		return (
-			<HStack h='100%' w='100%' position='absolute'>
-				{isSmallerThan760 ? (
-					<Image
-						height='100%'
-						width='100%'
-						objectFit='cover'
-						src={AboutImage}
-					/>
-				) : (
-					<video className='videoStyle' autoPlay muted loop>
-						<source src={AboutVideo} type='video/mp4'></source>
-					</video>
-				)}
+			<HStack h='100%' w='100%' position='absolute' bg='gray'>
+				(
+				<video className='videoStyle' autoPlay muted loop>
+					<source src={AboutVideo} type='video/mp4'></source>
+				</video>
+				)
 			</HStack>
 		);
 	};
