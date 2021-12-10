@@ -40,7 +40,7 @@ const Banner = ({
 					<LazyLoadImage
 						style={{
 							objectFit: 'contain',
-							height: '20rem',
+							height: '60vh',
 							width: '100%',
 						}}
 						effect='blur'
@@ -60,7 +60,7 @@ const Banner = ({
 				justifyContent='center'
 			>
 				<Heading as='h2'>{aboutUsBanner ? '' : homeIntroHeading}</Heading>
-				<Text as='p' color={aboutUsBanner ? 'brand.white' : 'brand.golden'}>
+				<Text as='p' color={aboutUsBanner ? 'brand.white' : 'brand.black'}>
 					{aboutUsBanner ? aboutUsText : homeIntroText}
 				</Text>
 				{aboutUsBanner ? (
