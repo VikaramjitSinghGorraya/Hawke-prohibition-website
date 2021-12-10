@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { VStack, HStack, Text } from '@chakra-ui/react';
+import { VStack, HStack, Text, useMediaQuery } from '@chakra-ui/react';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css';
 import { motion, useAnimation } from 'framer-motion';
@@ -8,12 +8,18 @@ import { popOnView } from '../animations/Variants';
 
 const MotionVStack = motion(VStack);
 const ProductCard = ({ imageName, productName, productPrice }) => {
+	const [isLessThan768] = useMediaQuery('(max-width: 768px)');
 	const controls = useAnimation();
 	const [ref, inView] = useInView();
 
 	useEffect(() => {
-		inView ? controls.start('visible') : controls.start('hidden');
-	}, [controls, inView]);
+		if (inView) {
+			controls.start('visible');
+		}
+		if (!isLessThan768 && !inView) {
+			controls.start('hidden');
+		}
+	}, [controls, inView, isLessThan768]);
 
 	return (
 		<MotionVStack
@@ -40,7 +46,7 @@ const ProductCard = ({ imageName, productName, productPrice }) => {
 			/>
 
 			<HStack w='100%' justifyContent='center' layerStyle='footNotes'>
-				<Text as='p'>
+				<Text as='p' fontWeight='340'>
 					{productName} <br />${productPrice}/-
 				</Text>
 			</HStack>
