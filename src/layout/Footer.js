@@ -15,7 +15,7 @@ const Footer = () => {
 		>
 			<VStack w='100%' layerStyle='footHeading'>
 				<Text as='p'>LOCATION</Text>
-				<HStack layerStyle='footNotes'>
+				<HStack>
 					<Text as='p'>
 						426 Kaska Road, Sherwood Park, <br /> Alberta T8A 4G8
 					</Text>
@@ -24,7 +24,7 @@ const Footer = () => {
 
 			<VStack w='100%' layerStyle='footHeading'>
 				<Text as='p'>CONTACT</Text>
-				<VStack spacing={0} layerStyle='footNotes'>
+				<VStack spacing={0}>
 					<Text as='p'>
 						<a href='tel:+4733378901'>780-449-5331</a>
 					</Text>
